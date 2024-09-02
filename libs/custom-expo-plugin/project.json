@@ -1,0 +1,20 @@
+{
+  "name": "custom-expo-plugin",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/custom-expo-plugin/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project custom-expo-plugin --web",
+  "targets": {
+    "build-plugin": {
+      "executor": "@nx/js:tsc",
+      "cache": true,
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/custom-expo-plugin",
+        "main": "libs/custom-expo-plugin/app.plugin.ts",
+        "tsConfig": "libs/custom-expo-plugin/tsconfig.plugin.json"
+      }
+    }
+  }
+}

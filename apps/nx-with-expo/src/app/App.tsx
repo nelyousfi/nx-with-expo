@@ -11,6 +11,7 @@ import {
   Linking,
 } from 'react-native';
 import Svg, { G, Path } from 'react-native-svg';
+import { Custom } from '@nx-with-expo/custom-expo-plugin';
 
 export const App = () => {
   const [whatsNextYCoord, setWhatsNextYCoord] = useState<number>(0);
@@ -33,6 +34,7 @@ export const App = () => {
         >
           <View style={styles.section}>
             <Text style={styles.textLg}>Hello there,</Text>
+            <Custom />
             <Text
               style={[styles.textXL, styles.appTitleText]}
               testID="heading"
