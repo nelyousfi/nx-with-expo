@@ -13,9 +13,9 @@
     "react": "18.2.0"
   },
   "scripts": {
-    "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/nx-with-expo && cp package-lock.json apps/nx-with-expo",
-    "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/nx-with-expo",
+    "postinstall": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/nx-with-expo && nx run nx-with-expo:build-plugins --verbose",
     "android": "expo run:android",
     "ios": "expo run:ios"
-  }
+  },
+  "devDependencies": {}
 }
